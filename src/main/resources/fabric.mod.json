@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "class-smp-plugin",
+	"version": "${version}",
+	"name": "Class SMP plugin",
+	"description": "This mod was made for the Classes SMP server",
+	"authors": [
+		"Pixel_b0t"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/class-smp-plugin/icon.png",
+	"environment": "*",
+	"entrypoints": {
+
+		"main": [
+			"pixel.classsmp.ClassSMPPlugin"
+		]
+	},
+	"mixins": [
+		"class-smp-plugin.mixins.json",
+		{
+			"config": "class-smp-plugin.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
